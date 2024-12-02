@@ -60,6 +60,36 @@ const int m_column = 15;
 const int m_row    = 7;
 char pile_alpha[m_row][m_column];
 int pile_height[m_column]= {0};
+string str1 = "";  //---string for storing alphabets of first two rows---//
+string str2 = "";
+string str3 = "";
+string str4 = "";
+string str5 = "";
+string str6 = "";
+string str7 = "";
+string str8 = "";
+string str9 = "";
+string str10 = "";
+string str11 = "";
+string str12 = "";
+string str13 = "";
+string str14 = "";
+string str15 = "";
+
+string  str2_1 = "";
+string  str2_2 = "";
+string  str2_3 = "";
+string  str2_4 = "";
+string  str2_5 = "";
+string  str2_6 = "";
+string  str2_7 = "";
+string  str2_8 = "";
+string  str2_9 = "";
+string  str2_10 = "";
+string  str2_11 = "";
+string  str2_12 = "";
+string  str2_13 = "";
+
 
 const int nalphabets = 26;
 
@@ -257,7 +287,7 @@ void DrawShooter(int sx, int sy, int cwidth = 60, int cheight = 60)
 	//glutSwapBuffers();
 }
 
-void boardAlphabet()
+void boardAlphabet()  //---Function for assigning random numbers to first two rows---//
 {   
     
     
@@ -279,7 +309,7 @@ void shooterAlphabet()         //---function to display single alphabet placed o
   shoot = rand() % 26;
 
 }
-void fillingArray()
+void fillingArray()  //---Function for filing array -1 ---//
 {
   int i, j;
     
@@ -290,6 +320,112 @@ void fillingArray()
         pile_alpha[i][j] = -1;
         }
       }
+
+}
+
+void burstingRows()
+{
+  int i, j, k;
+  
+  
+      for(i = 0; i < 1; i++)
+          {
+          for(j = 0 ; j < 15 ; j++)
+              {
+              str1 += 'a' + boardalpha[i][j]; 
+              
+                str2 += 'a' + boardalpha[i][j+1];
+              
+                str3 += 'a' + boardalpha[i][j+2];
+              
+                str4 += 'a' + boardalpha[i][j+3];
+              
+                str5 += 'a' + boardalpha[i][j+4];
+              
+                str6 += 'a' + boardalpha[i][j+5];
+              
+                str7 += 'a' + boardalpha[i][j+6];
+              
+                str8 += 'a' + boardalpha[i][j+7];
+              
+                str9 += 'a' + boardalpha[i][j+8]; 
+              
+                str10 += 'a' + boardalpha[i][j+9];
+              
+                str11 += 'a' + boardalpha[i][j+10];
+              
+                str12 += 'a' + boardalpha[i][j+11];
+              
+                str13 += 'a' + boardalpha[i][j+12];
+          cout<<str1<<endl;
+          cout<<str2<<endl;
+          cout<<str3<<endl;
+          cout<<str4<<endl;
+          cout<<str5<<endl;
+          cout<<str6<<endl;
+          cout<<str7<<endl;
+          cout<<str8<<endl;
+          cout<<str9<<endl;
+          cout<<str10<<endl;
+          cout<<str11<<endl;
+          cout<<str12<<endl;
+          cout<<str13<<endl;
+              
+              
+        cout<<endl<<endl;
+              }
+              
+          }
+
+      for(i = 1; i < 2; i++)
+          {
+          for(j = 0 ; j < 15 ; j++)
+              {
+              str2_1 += 'a' + boardalpha[i][j]; 
+              
+                str2_2 += 'a' + boardalpha[i][j+1];
+              
+                str2_3 += 'a' + boardalpha[i][j+2];
+              
+                str2_4 += 'a' + boardalpha[i][j+3];
+              
+                str2_5 += 'a' + boardalpha[i][j+4];
+              
+                str2_6 += 'a' + boardalpha[i][j+5];
+              
+                str2_7 += 'a' + boardalpha[i][j+6];
+              
+                str2_8 += 'a' + boardalpha[i][j+7];
+              
+                str2_9 += 'a' + boardalpha[i][j+8]; 
+              
+                str2_10 += 'a' + boardalpha[i][j+9];
+              
+                str2_11 += 'a' + boardalpha[i][j+10];
+              
+                str2_12 += 'a' + boardalpha[i][j+11];
+              
+                str2_13 += 'a' + boardalpha[i][j+12];
+          cout<<str2_1<<endl;
+          cout<<str2_2<<endl;
+          cout<<str2_3<<endl;
+          cout<<str2_4<<endl;
+          cout<<str2_5<<endl;
+          cout<<str2_6<<endl;
+          cout<<str2_7<<endl;
+          cout<<str2_8<<endl;
+          cout<<str2_9<<endl;
+          cout<<str2_10<<endl;
+          cout<<str2_11<<endl;
+          cout<<str2_12<<endl;
+          cout<<str2_13<<endl;
+              
+              
+        cout<<endl<<endl;
+              }
+              
+          }
+
 
 }
 
@@ -500,9 +636,11 @@ int main(int argc, char*argv[]) {
         boardAlphabet();
         shooterAlphabet();
         fillingArray();
+        burstingRows();
         
  	//Dictionary for matching the words. It contains the 370099 words.
-	dictionary = new string[dictionarysize]; 
+	dictionary = new string[dictionarysize];
+	
 	ReadWords("words_alpha.txt", dictionary); // dictionary is an array of strings
 	//print first 5 words from the dictionary
 	for(int i=0; i < 5; ++i)
