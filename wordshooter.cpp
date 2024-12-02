@@ -105,10 +105,10 @@ void RegisterTextures_Write()
 		// select modulate to mix texture with color for shading
 		glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
-		// when texture area is small, bilinear filter the closest MIP map
+		// when texture area is small, bi-linear filter the closest MIP map
 		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
 			GL_LINEAR_MIPMAP_NEAREST);
-		// when texture area is large, bilinear filter the first MIP map
+		// when texture area is large, bi-linear filter the first MIP map
 		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 		// if wrap is true, the texture wraps over at the edges (repeat)
@@ -274,9 +274,23 @@ void boardAlphabet()
 /*
 * Main Canvas drawing function.
 * */
-void shooterAlphabet()         //function to display single alphabet placed on board
+void shooterAlphabet()         //---function to display single alphabet placed on board---//
 {
-  shoot = (alphabets)GetAlphabet();
+  shoot = rand() % 26;
+
+}
+void fillingArray()
+{
+  int i, j;
+    
+    for(i = 0; i< 7; i++)
+      {
+      for(j = 0; j< 15 ; j++)
+        {
+        pile_alpha[i][j] = -1;
+        }
+      }
+
 }
 
 void DisplayFunction() {
@@ -306,18 +320,17 @@ void DisplayFunction() {
           {
           for(int col = 0; col < 15; col ++)
             {
-              if(pile_alpha[row][col] !=0)
+              if(pile_alpha[row][col] != -1)
                 {
                   int x = col * 60 + 10;
                   int y = height - 210 - row * 60;
-                  DrawAlphabet(static_cast<alphabets>(pile_alpha[row][col]), x, y, awidth, aheight);
-
+                  DrawAlphabet((alphabets)(pile_alpha[row][col]), x, y, awidth, aheight);
                 }
             }
           }
         
         
-        DrawAlphabet(static_cast<alphabets>(shoot), ball_x , ball_y, awidth, aheight);
+        DrawAlphabet((alphabets)shoot, ball_x , ball_y, awidth, aheight);
         
         
 	DrawString(40, height - 20, width, height + 5, "Score " + Num2Str(score), colors[BLUE_VIOLET]);
@@ -458,12 +471,10 @@ void Timer(int m) {
           {
               int col = round(ball_x/60) ;
               int row = pile_height[col];
-              pile_alpha[row][col] = static_cast<alphabets>(shoot);      //---storing the random the alphabet in the specific tile---//
+              pile_alpha[row][col] = shoot;      //---storing the random the alphabet in the specific tile---//
               
               pile_height[col]++;
               
-               cout << "Pile[" << row << "][" << col << "] = "
-                 << static_cast<alphabets>(shoot)<< endl;
               
               ball_x = center_pos_x;       //---resetting the positions---//
               ball_y = center_pos_y;
@@ -488,6 +499,7 @@ int main(int argc, char*argv[]) {
         srand(time(0));
         boardAlphabet();
         shooterAlphabet();
+        fillingArray();
         
  	//Dictionary for matching the words. It contains the 370099 words.
 	dictionary = new string[dictionarysize]; 
