@@ -90,6 +90,19 @@ string  str2_11 = "";
 string  str2_12 = "";
 string  str2_13 = "";
 
+string  str3_1 = "";
+string  str3_2 = "";
+string  str3_3 = "";
+string  str3_4 = "";
+string  str3_5 = "";
+string  str3_6 = "";
+string  str3_7 = "";
+string  str3_8 = "";
+string  str3_9 = "";
+string  str3_10 = "";
+string  str3_11 = "";
+string  str3_12 = "";
+string  str3_13 = "";
 
 const int nalphabets = 26;
 
@@ -370,18 +383,33 @@ void burstingRows()
           cout<<str11<<endl;
           cout<<str12<<endl;
           cout<<str13<<endl;
-              
-              
+          
         cout<<endl<<endl;
               }
-              
           }
+      for(i = 0 ; i < 1 ; i++)
+        {
+        for(j=15; j >= 0; j--)
+            {
+            str3_1 += boardalpha[i][j];
+            str3_2 += boardalpha[i][j-1];
+            str3_3 += boardalpha[i][j-2];
+            str3_4 += boardalpha[i][j-3];
+            
+          cout<<str3_1<<endl;
+          cout<<str3_2<<endl;
+          cout<<str3_3<<endl;
+          cout<<str3_4<<endl;
 
+            
+            }
+        }
+    
       for(i = 1; i < 2; i++)
           {
           for(j = 0 ; j < 15 ; j++)
               {
-              str2_1 += 'a' + boardalpha[i][j]; 
+                str2_1 += 'a' + boardalpha[i][j]; 
               
                 str2_2 += 'a' + boardalpha[i][j+1];
               
@@ -406,6 +434,8 @@ void burstingRows()
                 str2_12 += 'a' + boardalpha[i][j+11];
               
                 str2_13 += 'a' + boardalpha[i][j+12];
+                
+                
           cout<<str2_1<<endl;
           cout<<str2_2<<endl;
           cout<<str2_3<<endl;
