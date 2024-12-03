@@ -1,8 +1,13 @@
 #include<iostream>
 #include<cstdlib>
 #include<ctime>
+#include<string>
+#include<fstream>
+
 using namespace std;
 
+string * dictionary;
+int dictionarysize = 369646;
 const int row = 2;
 const int col = 15;
 char boardalpha[row][col];
@@ -24,7 +29,9 @@ int main()
 {
   srand(time(0));
   boardAlphabet();
-  
+
+
+
    int i, j, k ;
    string str1 = "" , str2 = "", str3 = "" , str4 = "" , str5 = "";
   
@@ -55,6 +62,9 @@ int main()
   cout<<str3<<endl;
   cout<<str4<<endl;
   cout<<str5<<endl;
-
+  
+  cout<<sizeof(str1)<<endl;
+  cout<<sizeof(str2)<<endl;
+  cout<<CountAlphabets(str3)<<endl;
   return 0;
 }

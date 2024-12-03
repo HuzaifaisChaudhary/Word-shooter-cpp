@@ -58,13 +58,15 @@ float ball_x = center_pos_x;
 float ball_y = center_pos_y;
 const int m_column = 15;
 const int m_row    = 7;
+string word = "aah";
 char pile_alpha[m_row][m_column];
 int pile_height[m_column]= {0};
+int t = 120;
 string str1 = "";  //---string for storing alphabets of first two rows---//
 string str2 = "";
 string str3 = "";
 string str4 = "";
-string str5 = "";
+string str5 = "";       
 string str6 = "";
 string str7 = "";
 string str8 = "";
@@ -344,32 +346,181 @@ void burstingRows()
       for(i = 0; i < 1; i++)
           {
           for(j = 0 ; j < 15 ; j++)
-              {
-              str1 += 'a' + boardalpha[i][j]; 
-              
+              {                                                                          
+              str1 += 'a' + boardalpha[i][j];
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str1 == dictionary[k])
+                    {
+                    cout<<"Word found"<<endl;
+                    score++;
+                    cout<<str1<<endl;
+                    }
+                  }
+                
+              if(j<14) 
+                {
                 str2 += 'a' + boardalpha[i][j+1];
-              
+                 for(k = 0; k < 369646; k++)
+                  {
+                  if(str2 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str2<<endl;
+                      }
+                  }
+                }
+              if(j<13) 
+                {
                 str3 += 'a' + boardalpha[i][j+2];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str3 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str3<<endl;
+                      }
+                  }
+                }
+              if(j<12)
+                {
                 str4 += 'a' + boardalpha[i][j+3];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str4 == dictionary[k])
+                    {
+                    cout<<"Word found"<<endl;
+                    score++;
+                    cout<<str4<<endl;
+                    }
+                  }  
+                }
+                  
+              if(j<11) 
+                {
                 str5 += 'a' + boardalpha[i][j+4];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str5 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str5<<endl;
+                      }
+                  }
+                }
+              if(j<10) 
+                {
                 str6 += 'a' + boardalpha[i][j+5];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str6 == dictionary[k])
+                     {
+                     cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str6<<endl;
+                      }
+                  } 
+                }
+              if(j<9)
+                {
                 str7 += 'a' + boardalpha[i][j+6];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str7 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str7<<endl;
+                      }
+                  }  
+                }
+              if(j<8)
+                {
                 str8 += 'a' + boardalpha[i][j+7];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str8 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str8<<endl;
+                      }
+                  }   
+                }
+              if(j<7) 
+                {
                 str9 += 'a' + boardalpha[i][j+8]; 
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str9 == dictionary[k])
+                    
+                    {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str9<<endl;
+                    }
+                  } 
+                }
+              if(j<6) 
+                {
                 str10 += 'a' + boardalpha[i][j+9];
-              
+                for(k = 0; k < 369646; k++)
+                  {
+                  if(str10 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str10<<endl;
+                      }
+                  }  
+                }
+              if(j<5)
+                {
                 str11 += 'a' + boardalpha[i][j+10];
-              
+                 for(k = 0; k < 369646; k++)
+                  {
+                  if(str11 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str11<<endl;
+                      }
+                  } 
+                }
+              if(j<4)
+                {
                 str12 += 'a' + boardalpha[i][j+11];
-              
+                 for(k = 0; k < 369646; k++)
+                  {
+                  if(str12 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str12<<endl;
+                      }
+                  }  
+                }
+              if(j<3)
+                {
                 str13 += 'a' + boardalpha[i][j+12];
+                  for(k = 0; k < 369646; k++)
+                  {
+                  if(str13 == dictionary[k])
+                      {
+                      cout<<"Word found"<<endl;
+                      score++;
+                      cout<<str13<<endl;
+                      }
+                  }            
+                }
+                
+            
+              
+                 
+              
           cout<<str1<<endl;
           cout<<str2<<endl;
           cout<<str3<<endl;
@@ -387,77 +538,13 @@ void burstingRows()
         cout<<endl<<endl;
               }
           }
-      for(i = 0 ; i < 1 ; i++)
-        {
-        for(j=15; j >= 0; j--)
-            {
-            str3_1 += boardalpha[i][j];
-            str3_2 += boardalpha[i][j-1];
-            str3_3 += boardalpha[i][j-2];
-            str3_4 += boardalpha[i][j-3];
-            
-          cout<<str3_1<<endl;
-          cout<<str3_2<<endl;
-          cout<<str3_3<<endl;
-          cout<<str3_4<<endl;
-
-            
-            }
-        }
-    
-      for(i = 1; i < 2; i++)
-          {
-          for(j = 0 ; j < 15 ; j++)
-              {
-                str2_1 += 'a' + boardalpha[i][j]; 
-              
-                str2_2 += 'a' + boardalpha[i][j+1];
-              
-                str2_3 += 'a' + boardalpha[i][j+2];
-              
-                str2_4 += 'a' + boardalpha[i][j+3];
-              
-                str2_5 += 'a' + boardalpha[i][j+4];
-              
-                str2_6 += 'a' + boardalpha[i][j+5];
-              
-                str2_7 += 'a' + boardalpha[i][j+6];
-              
-                str2_8 += 'a' + boardalpha[i][j+7];
-              
-                str2_9 += 'a' + boardalpha[i][j+8]; 
-              
-                str2_10 += 'a' + boardalpha[i][j+9];
-              
-                str2_11 += 'a' + boardalpha[i][j+10];
-              
-                str2_12 += 'a' + boardalpha[i][j+11];
-              
-                str2_13 += 'a' + boardalpha[i][j+12];
-                
-                
-          cout<<str2_1<<endl;
-          cout<<str2_2<<endl;
-          cout<<str2_3<<endl;
-          cout<<str2_4<<endl;
-          cout<<str2_5<<endl;
-          cout<<str2_6<<endl;
-          cout<<str2_7<<endl;
-          cout<<str2_8<<endl;
-          cout<<str2_9<<endl;
-          cout<<str2_10<<endl;
-          cout<<str2_11<<endl;
-          cout<<str2_12<<endl;
-          cout<<str2_13<<endl;
-              
-              
-        cout<<endl<<endl;
-              }
-              
-          }
+     
+        cout<<score;
+      
 
 
 }
+
 
 void DisplayFunction() {
 	// set the background color using function glClearColor.
@@ -469,39 +556,49 @@ void DisplayFunction() {
 	glClear(GL_COLOR_BUFFER_BIT); //Update the colors
 
 	//write your drawing commands here or call your drawing functions...
-        for(int row = 0; row<2; row++)
-          {
-          for(int col= 0; col < 15 ; col++)
-            {
-            int x = col * 60 + 10 ;
-            int y = height - (row+1) * 60 -   30;
-            DrawAlphabet(static_cast<alphabets>(boardalpha[row][col]), x, y, awidth, aheight);
+        
+        
+                for(int row = 0; row<2; row++)                     //---loop for displaying the first two rows of the board---//
+                {
+                   for(int col= 0; col < 15 ; col++)
+                      {
+                      int x = col * 60 + 10 ;
+                      int y = height - (row+1) * 60 -   30;
+                      DrawAlphabet(static_cast<alphabets>(boardalpha[row][col]), x, y, awidth, aheight);
             
-            }
+                       }
             
-          }
+                  }
 
         
-        for(int row = 0; row< 7; row ++ )
-          {
-          for(int col = 0; col < 15; col ++)
-            {
-              if(pile_alpha[row][col] != -1)
-                {
-                  int x = col * 60 + 10;
-                  int y = height - 210 - row * 60;
-                  DrawAlphabet((alphabets)(pile_alpha[row][col]), x, y, awidth, aheight);
-                }
-            }
-          }
-        
-        
+                  for(int row = 0; row< 7; row ++ )  //---loop for displaying the shooted alphabets on the screen---//
+                      
+                      {
+                        
+                        for(int col = 0; col < 15; col ++)
+                            
+                            {
+                              
+                              if(pile_alpha[row][col] != -1)
+                                  
+                                  {
+                                      int x = col * 60 + 10;
+                                      int y = height - 210 - row * 60;
+                                      DrawAlphabet((alphabets)(pile_alpha[row][col]), x, y, awidth, aheight);
+                                  
+                                  }
+                            
+                            }
+                            
+                            
+          
         DrawAlphabet((alphabets)shoot, ball_x , ball_y, awidth, aheight);
         
+            }
         
 	DrawString(40, height - 20, width, height + 5, "Score " + Num2Str(score), colors[BLUE_VIOLET]);
 	DrawString(width / 2 - 30, height - 25, width, height,
-		"Time Left:" + Num2Str(120) + " secs", colors[RED]);
+		"Time Left:" + Num2Str(120) + "24i-0052 Muhammad Huzaifa              secs", colors[RED]);
 	DrawString(20, 10, width, height,
 		"Play like a champ!!", colors[BLUE]);
 	
@@ -595,6 +692,8 @@ void MouseClicked(int button, int state, int x, int y) {
                                 
                                 }
                         }
+                        if("aah" == dictionary[1])
+                        {cout << "working";}
   
 		}
 	}
@@ -666,7 +765,8 @@ int main(int argc, char*argv[]) {
         boardAlphabet();
         shooterAlphabet();
         fillingArray();
-        burstingRows();
+        
+        //check();
         
  	//Dictionary for matching the words. It contains the 370099 words.
 	dictionary = new string[dictionarysize];
@@ -674,8 +774,9 @@ int main(int argc, char*argv[]) {
 	ReadWords("words_alpha.txt", dictionary); // dictionary is an array of strings
 	//print first 5 words from the dictionary
 	for(int i=0; i < 5; ++i)
+	//check(i);
 		cout<< " word "<< i << " =" << dictionary[i] <<endl;
-
+        burstingRows();
 	//Write your code here for filling the canvas with different Alphabets. You can use the Getalphabet function for getting the random alphabets
 
 
