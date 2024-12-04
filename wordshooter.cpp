@@ -342,23 +342,27 @@ void bursting()
 {
   int i, j, k, a , l = 14;
 
-    for(i = 0 ; i < 1 ; i++)
+    for(i = 0 ; i < 2 ; i++)
       
       {
-      
-  int l1 = 14;
-  int l2 = 13;
-  int l3 = 12;
-  int l4 = 11;
-  int l5 = 10;
-  int l6 = 9;
+  int b = 1; 
+  int max = 15;
+  int b2 = 2; 
+  int l1 = 15;
+  int l2 = 15;
+  int l3 = 15;
+  int l4 = 15;
+  int l5 = 15;
+  int l6 = 15;
   int l7 = 15;
   int l8 = 15;
   int l9 = 15;
   int l10 = 15;
   int l11 = 15;
   int l12 = 15;
-        for(j = 0; j < 13 ; j++)
+  int l13 = 15;
+  int l14 = 15;
+        for(j = 0; j < 15 ; j++)
             
             
             {
@@ -379,156 +383,162 @@ void bursting()
                       }
                     }
               
-              if(j>0)
-              {
+                if(j>=0)
+                  {
+                    for(k = 0; k< l1 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"2)"<<str1<<endl;
+                    str1 = "";
+                    l1--;
+                  }
+                
+                if(j>0)
+                  {
+                    for(k = 1; k< l2 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"3)"<<str1<<endl;
+                    str1 = "";
+                    l2--;
+                  }
+                  
+                 if(j>1)
+                  {
+                    for(k = 2; k< l3 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"4)"<<str1<<endl;
+                    str1 = "";
+                    l3--;
+                  }
+                  
+                 if(j>2)
+                  {
+                    for(k = 3; k< l4 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"5)"<<str1<<endl;
+                    str1 = "";
+                    l4--;
+                  }
+                  
+                if(j>3)
+                  {
+                    for(k = 4; k< l5 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"6)"<<str1<<endl;
+                    str1 = "";
+                    l5--;
+                  }
+                
+                if(j>4)
+                  {
+                    for(k = 5; k< l6 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"7)"<<str1<<endl;
+                    str1 = "";
+                    l6--;
+                  }
+                  
+                if(j>5)
+                  {
+                    for(k = 6; k< l7 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"8)"<<str1<<endl;
+                    str1 = "";
+                    l7--;
+                  }
+                  
+                if(j>6)
+                  {
+                    for(k = 7; k< l8 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"9)"<<str1<<endl;
+                    str1 = "";
+                    l8--;
+                  }
+                  
+                if(j>7)
+                  {
+                    for(k = 8; k< l9 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"10)"<<str1<<endl;
+                    str1 = "";
+                    l9--;
+                  }
+                  
+                if(j>9)
+                  {
+                    for(k = 9; k< l10 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"11)"<<str1<<endl;
+                    str1 = "";
+                    l10--;
+                  }
               
-              for(k = 1; k < l1 ; k++)
-                  
+              if(j>10)
                   {
-                  str1 += 'a' + boardalpha[i][k];
-                  
+                    for(k = 10; k< l11 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"12)"<<str1<<endl;
+                    str1 = "";
+                    l11--;
                   }
-                  cout<<"2)"<<str1<<endl;
-                  str1 = "";
-                  l1--;
-                }  
-              
-              if(j>1)
-                {
+                  
                 
-              for(k = 2; k < l2  ; k++)
-                  
+                if(j>11)
                   {
-                  str1 += 'a' + boardalpha[i][k];
-                  
+                    for(k = 11; k< l12 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"13)"<<str1<<endl;
+                    str1 = "";
+                    l12--;
                   }
-                  cout<<"3)"<<str1<<endl;
-                  str1 = "";
-                  l2--;
-                }
-                
-             if(j>2)
-                {   
-                
-              for(k = 3; k < l3; k++)
                   
+                if(j>12)
                   {
-                  str1 += 'a' + boardalpha[i][k];
-                  
+                    for(k = 12; k< l13 ; k++)
+                        
+                        {
+                        str1 += 'a' + boardalpha[i][k];
+                        }
+                    cout<<"13)"<<str1<<endl;
+                    str1 = "";
+                    l13--;
                   }
-                  cout<<"4)"<<str1<<endl;
-                  str1 = "";
-                  l3--;
-                }
-                
-            if(j>3)
-                {
-                
-              for(k = 4; k < l4 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"5)"<<str1<<endl;
-                  str1 = "";
-                  l4--;
-                 } 
-              if(j>4)
-                {
-                 
-              
-              for(k = 5; k < l5 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"6)"<<str1<<endl;
-                  str1 = "";
-                  l5--;
-                }
-             if(j>5)
-                {
-                      
-              for(k = 6; k < l6 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"7)"<<str1<<endl;
-                  str1 = "";
-                  l6--;
-                }
-           
-            if(j>6)
-              {
-              for(k = 7; k < l7 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"8)"<<str1<<endl;
-                  str1 = "";
-                  l7--;
-                }
-             
-             if(j>6)
-              {
-              for(k = 8; k < l8 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"9)"<<str1<<endl;
-                  str1 = "";
-                  l8--;
-                }
-                
-            if(j>9)
-              {
-              for(k = 9; k < l9 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"10)"<<str1<<endl;
-                  str1 = "";
-                  l9--;
-              }
-             
-             if(j>6)
-              {
-              for(k = 10; k < l10 ; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"11)"<<str1<<endl;
-                  str1 = "";
-                  l10--;
-                }
-             
-             if(j>6)
-              {
-              for(k = 11; k < l11; k++)
-                  
-                  {
-                  str1 += 'a' + boardalpha[i][k];
-                  
-                  }
-                  cout<<"12)"<<str1<<endl;
-                  str1 = "";
-                  l11--;
-              }
-                  
-                  
-              
             }
       
       }
