@@ -338,9 +338,12 @@ void fillingArray()  //---Function for filing array -1 ---//
       }
 
 }
-void bursting()
+void burstingRows()
 {
   int i, j, k, a , l = 14;
+
+    fstream file;
+    file.open ("words.txt" , ios::app);
 
     for(i = 0 ; i < 2 ; i++)
       
@@ -374,12 +377,25 @@ void bursting()
                   
                   }
                   cout<<"1)"<<str1<<endl;
-                  str1 = "";
+                  cout<<"Number"<<j<<endl;
+                  
                   for(l = 0 ; l < 369646 ; l++)
                     {
                     if(str1 == dictionary[l])
                       {
-                      boardalpha[i][k] == -1;
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                        if(file.is_open())
+                          file<<str1<<"\n";
+                      str1 = "";
                       }
                     }
               
@@ -391,8 +407,28 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"2)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l1--;
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                 
                 if(j>0)
@@ -403,8 +439,30 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"3)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l2--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                        if(file.is_open())
+                          file<<str1<<"\n";
+                      
+                      }
+                    }
+                    str1 = "";
                   }
                   
                  if(j>1)
@@ -415,8 +473,29 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"4)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l3--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                  if(j>2)
@@ -427,8 +506,29 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"5)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l4--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                 if(j>3)
@@ -439,8 +539,29 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"6)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l5--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                 
                 if(j>4)
@@ -451,8 +572,30 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"7)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l6--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                 if(j>5)
@@ -463,8 +606,29 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"8)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l7--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                 if(j>6)
@@ -475,8 +639,29 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"9)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l8--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                 if(j>7)
@@ -487,11 +672,32 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"10)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l9--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
-                if(j>9)
+                if(j>8)
                   {
                     for(k = 9; k< l10 ; k++)
                         
@@ -499,11 +705,32 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"11)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l10--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
               
-              if(j>10)
+              if(j>9)
                   {
                     for(k = 10; k< l11 ; k++)
                         
@@ -511,12 +738,33 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"12)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l11--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
                 
-                if(j>11)
+                if(j>10)
                   {
                     for(k = 11; k< l12 ; k++)
                         
@@ -524,11 +772,32 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"13)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l12--;
+                    
+                  for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                       b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                       
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
                   
-                if(j>12)
+                if(j>11)
                   {
                     for(k = 12; k< l13 ; k++)
                         
@@ -536,402 +805,35 @@ void bursting()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"13)"<<str1<<endl;
-                    str1 = "";
+                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     l13--;
+                    
+                    for(l = 0 ; l < 369646 ; l++)
+                    {
+                    if(str1 == dictionary[l])
+                      {
+                      b = 1;
+                      for(a = 0 ; a < 15 - j ; a ++)
+                        {
+                        
+                        boardalpha[i][k-b] = -1;
+                        boardalpha[i][k-b] = rand() %26;
+                        b++;
+                        score++;
+                        
+                        }
+                      if(file.is_open())
+                          file<<str1<<"\n";
+                      }
+                    }
+                    str1 = "";
                   }
             }
       
       }
 
-
-}
-void burstingRows()
-{
-  int i, j, k , l;
-  
-  
-    /*  for(i = 0; i < 1; i++)
-          {
-          for(j = 0 ; j < 15 ; j++)
-              {                                                                          
-              str1 += 'a' + boardalpha[i][j];
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str1 == dictionary[k])
-                    {
-                    cout<<"Word found"<<endl;
-                    
-                    cout<<str1<<endl<<j<<endl;
-                    for(l = j-j ; l < j+1 ; l++)
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str1 = "";
-                      score += j;
-                      }
-
-                    }
-                  }
-                
-              if(j<14) 
-
-                {
-                str2 += 'a' + boardalpha[i][j+1];
-
-                 for(k = 0; k < 369646; k++)
-                  {
-                  if(str2 == dictionary[k])
-
-                      {
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str2<<endl;
-                      for(l = j-j + 1 ; l < j+2 ; l++)
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str2 = "";
-                      score += j;
-                      }
-
-                      }
-
-                  }
-                }
-              if(j<13) 
-                {
-                str3 += 'a' + boardalpha[i][j+2];
-
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str3 == dictionary[k])
-                      {
-
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str3<<endl;
-                      for(l = j -j + 2; l < j+3; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str3 = "";
-
-                      score += j;
-                      }
-                      }
-                  }
-
-                }
-              if(j<12)
-                {
-
-                str4 += 'a' + boardalpha[i][j+3];
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str4 == dictionary[k])
-
-                    {
-                    cout<<"Word found"<<endl<<j<<endl;
-                    
-
-                    cout<<str4<<endl;
-                    for(l = j - j + 3 ; l < j+4; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-
-                      str4 = "";
-                      score += j;
-
-                      }
-                    }
-                  }  
-
-                }
-                  
-
-              if(j<11) 
-                {
-
-                str5 += 'a' + boardalpha[i][j+4];
-                for(k = 0; k < 369646; k++)
-
-                  {
-
-                  if(str5 == dictionary[k])
-                      {
-
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-
-                      cout<<str5<<endl;
-
-                      for(l = j - j + 4 ; l < j+5; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-
-                      cout<<endl<<"L = "<<l<<endl;
-
-                      str5 = "";
-
-                      score += j;
-
-                      }
-
-                      }
-
-                  }
-
-                }
-
-              if(j<10) 
-
-                {
-
-                str6 += 'a' + boardalpha[i][j+5];
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str6 == dictionary[k])
-                     {
-
-                     cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str6<<endl;
-                      for(l = j - j + 5 ; l < j +6; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str6 = "";
-                      score += j;
-                      }
-                      }
-                  } 
-
-                }
-              if(j<9)
-
-                {
-                str7 += 'a' + boardalpha[i][j+6];
-                for(k = 0; k < 369646; k++)
-
-                  {
-                  if(str7 == dictionary[k])
-                      {
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str7<<endl;
-                      for(l = j - j + 6 ; l < j+7; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str7 = "";
-                      score += j;
-                      }
-                      }
-
-                  }  
-                }
-              if(j<8)
-                {
-                str8 += 'a' + boardalpha[i][j+7];
-                for(k = 0; k < 369646; k++)
-                  {
-
-                  if(str8 == dictionary[k])
-                      {
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str8<<endl;
-                      for(l = j - j + 7 ; l < j+8 ; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str8 = "";
-                      score += j;
-
-                      }
-                      }
-                  }   
-                }
-              if(j<7) 
-                {
-
-                str9 += 'a' + boardalpha[i][j+8]; 
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str9 == dictionary[k])
-
-                    
-                    {
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-                      cout<<str9<<endl;
-
-                      for(l = j - j + 8 ; l < j+9; l++)
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-
-                      str9 = "";
-                      score += j;
-                      }
-                    }
-
-                  } 
-                }
-              if(j<6) 
-                {
-
-                str10 += 'a' + boardalpha[i][j+9];
-                for(k = 0; k < 369646; k++)
-                  {
-                  if(str10 == dictionary[k])
-
-                      {
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-
-                      cout<<str10<<endl;
-                      for(l = j - j + 9 ; l < j+10; l++)
-                      {
-
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str10 = "";
-
-                      score += j;
-                      }
-
-                      }
-                  }  
-                }
-
-              if(j<5)
-                {
-
-                str11 += 'a' + boardalpha[i][j+10];
-                 for(k = 0; k < 369646; k++)
-                  {
-
-                  if(str11 == dictionary[k])
-                      {
-
-                      cout<<"Word found"<<endl<<j<<endl;
-
-                    
-                      cout<<str11<<endl;
-
-                      for(l = j - j + 10 ; l < j+11 ; l++)
-                      {
-
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-
-                      str11 = "";
-
-                      score += j;
-
-                      }
-                      }
-
-                  } 
-
-                }
-
-              if(j<4)
-
-                {
-
-                str12 += 'a' + boardalpha[i][j+11];
-
-                 for(k = 0; k < 369646; k++)
-
-                  {
-
-                  if(str12 == dictionary[k])
-                      {
-
-                      cout<<"Word found"<<endl<<j<<endl;
-                      
-
-                      cout<<str12<<endl;
-                      for(l = j - j + 11 ; l < j+12 ; l++)
-
-                      {
-                      boardalpha[i][l] = -1;
-                      cout<<endl<<"L = "<<l<<endl;
-                      str12 = "";
-                      score += j;
-                      }
-
-                      }
-                  }  
-                }
-              if(j<3)
-                {
-                str13 += 'a' + boardalpha[i][j+12];
-
-                  for(k = 0; k < 369646; k++)
-                  {
-                  if(str13 == dictionary[k])
-                      {
-                      cout<<"Word found"<<endl<<j<<endl;
-
-                      
-                      cout<<str13<<endl;
-                      for(l = j - j + 12 ; l < j+13; l++)
-                      {
-                      boardalpha[i][l] = -1;
-
-                      cout<<endl<<"L = "<<l<<endl;
-                      str13 = "";
-                      score = score + j;
-                      }
-                      }
-
-                  }            
-                }
-                
-            
-
-              
-                 
-              
-          cout<<str1<<endl;
-
-          cout<<str2<<endl;
-          cout<<str3<<endl;
-          cout<<str4<<endl;
-          cout<<str5<<endl;
-
-          cout<<str6<<endl;
-          cout<<str7<<endl;
-          cout<<str8<<endl;
-
-          cout<<str9<<endl;
-          cout<<str10<<endl;
-          cout<<str11<<endl;
-          cout<<str12<<endl;
-
-          cout<<str13<<endl;
-          
-        cout<<endl<<endl;
-
-              }
-          }
-     
-
-        cout<<score;
-      
-
-
-    score = score/2;*/
+    file.close();
 }
 
 
@@ -1199,7 +1101,7 @@ int main(int argc, char*argv[]) {
 	//check(i);
 		cout<< " word "<< i << " =" << dictionary[i] <<endl;
         burstingRows();
-        bursting();
+        
 	//Write your code here for filling the canvas with different Alphabets. You can use the Getalphabet function for getting the random alphabets
 
 
