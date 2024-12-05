@@ -46,6 +46,8 @@ int bsx, bsy;
 //----self declared----//
 const int max_rows = 9;
 const int max_col = 15;
+int row;
+int col;
 char boardalpha[max_rows][max_col];  
 char shoot;
 float x_cord, y_cord;
@@ -56,54 +58,18 @@ float gradient_x = 0.0;
 float gradient_y = 0.0;
 float ball_x = center_pos_x;
 float ball_y = center_pos_y;
+int row_shoot;
+int col_shoot;
 
-string word = "aah";
 
 int pile_height[max_rows]= {0};
-int t = 120;
+int t = 150;
+int count = 15000;
+int count1 = 0;
 string str1 = "";  //---string for storing alphabets of first two rows---//
 string str2 = "";
 string str3 = "";
-string str4 = "";
-string str5 = "";       
-string str6 = "";
-string str7 = "";
-string str8 = "";
-string str9 = "";
-string str10 = "";
-string str11 = "";
-string str12 = "";
-string str13 = "";
-string str14 = "";
-string str15 = "";
-
-string  str2_1 = "";
-string  str2_2 = "";
-string  str2_3 = "";
-string  str2_4 = "";
-string  str2_5 = "";
-string  str2_6 = "";
-string  str2_7 = "";
-string  str2_8 = "";
-string  str2_9 = "";
-string  str2_10 = "";
-string  str2_11 = "";
-string  str2_12 = "";
-string  str2_13 = "";
-
-string  str3_1 = "";
-string  str3_2 = "";
-string  str3_3 = "";
-string  str3_4 = "";
-string  str3_5 = "";
-string  str3_6 = "";
-string  str3_7 = "";
-string  str3_8 = "";
-string  str3_9 = "";
-string  str3_10 = "";
-string  str3_11 = "";
-string  str3_12 = "";
-string  str3_13 = "";
+string word = "";
 
 const int nalphabets = 26;
 
@@ -338,6 +304,7 @@ void fillingArray()  //---Function for filing array -1 ---//
       }
 
 }
+
 void burstingRows()
 {
   int i, j, k, a , l = 14;
@@ -387,15 +354,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
-                        b++;
-                        score++;
                         
+                        b++;
+                        score++;                        
                         }
                         if(file.is_open())
                           file<<str1<<"\n";
                       str1 = "";
+                      count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
               
@@ -407,9 +378,8 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"2)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
-                    
                     l1--;
+                    
                     for(l = 0 ; l < 369646 ; l++)
                     {
                     if(str1 == dictionary[l])
@@ -418,14 +388,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -439,7 +414,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"3)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     
                     l2--;
                     
@@ -451,14 +426,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                         if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       
                       }
                     }
@@ -473,7 +453,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"4)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                   
                     
                     l3--;
                     
@@ -485,14 +465,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -506,7 +491,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"5)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                
                     
                     l4--;
                     
@@ -518,14 +503,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -539,7 +529,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"6)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                
                     
                     l5--;
                     
@@ -551,14 +541,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -572,7 +567,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"7)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     
                     l6--;
                     
@@ -585,14 +580,19 @@ void burstingRows()
                         {
                         
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -606,7 +606,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"8)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     
                     l7--;
                     
@@ -618,14 +618,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -639,7 +644,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"9)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                    
                     
                     l8--;
                     
@@ -651,14 +656,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -672,7 +682,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"10)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                   
                     
                     l9--;
                     
@@ -684,14 +694,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                     
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -705,7 +720,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"11)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                   
                     
                     l10--;
                     
@@ -717,14 +732,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                       
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -738,7 +758,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"12)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                   
                     
                     l11--;
                     
@@ -750,14 +770,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -772,7 +797,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"13)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                   
                     
                     l12--;
                     
@@ -784,14 +809,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                        
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -805,7 +835,7 @@ void burstingRows()
                         str1 += 'a' + boardalpha[i][k];
                         }
                     cout<<"13)"<<str1<<endl;
-                    cout<<"Number"<<j<<" & "<<k<<endl;
+                  
                     
                     l13--;
                     
@@ -817,14 +847,19 @@ void burstingRows()
                       for(a = 0 ; a < 15 - j ; a ++)
                         {
                         
-                        boardalpha[i][k-b] = -1;
                         boardalpha[i][k-b] = rand() %26;
+                        
                         b++;
                         score++;
                         
                         }
                       if(file.is_open())
                           file<<str1<<"\n";
+                          count1++;
+                        if(count1 == 4)
+                          {
+                          return;
+                          }
                       }
                     }
                     str1 = "";
@@ -836,6 +871,51 @@ void burstingRows()
     file.close();
 }
 
+int countalpha(string& word1)
+{
+  int count = 0;
+    
+     for(char chac : word1)
+      {
+      if(isalpha(chac))
+      count++;
+      }
+  
+  return count;
+}
+void horizontalpop(int roww, int colm)   //---Function for matching the words in rows--//
+{
+  int i , j , k , l , b , a;
+  int tempcol = col;
+  int temprow = row;
+  int l1 = 15;
+
+    
+    
+      for(i = col; i < 15 ; i++)
+        { 
+        
+          for(j = tempcol ; j< l1 ; j++)
+            {
+            word += boardalpha[temprow][j];
+            }
+            l1--;
+            for(k = 0 ; k < 369646 ; k++)
+              {
+              if(word == dictionary[k])
+                {
+                for(a = tempcol ; a < countalpha(word) ; a++)
+                  {
+                  boardalpha[temprow][a] = -1;
+                  cout<<"word found "<<endl;
+                  }
+                }                
+              }
+             cout<<"Word : "<<word; 
+             word = ""; 
+        }
+
+}
 
 void DisplayFunction() {
 	// set the background color using function glClearColor.
@@ -849,24 +929,24 @@ void DisplayFunction() {
 	//write your drawing commands here or call your drawing functions...
         
         
-                 for(int row = 0; row<2; row++)                     //---loop for displaying the first two rows of the board---//
+                 for(int rowss = 0; rowss<2; rowss++)                     //---loop for displaying the first two rows of the board---//
                 {
-                   for(int col= 0; col < 15 ; col++)
+                   for(int colss= 0; colss < 15 ; colss++)
                       {
-                      int x = col * 60 + 10 ;
-                      int y = height - (row+1) * 60 -   30;
-                      DrawAlphabet(static_cast<alphabets>(boardalpha[row][col]), x, y, awidth, aheight);
+                      int x = colss * 60 + 10 ;
+                      int y = height - (rowss+1) * 60 -   30;
+                      DrawAlphabet(static_cast<alphabets>(boardalpha[rowss][colss]), x, y, awidth, aheight);
             
                        }
             
                   }
 
     
-                       for(int row = 2; row< 9; row ++ )  //---loop for displaying the shooted alphabets on the screen---//
+                       for(row = 2; row< 9; row ++ )  //---loop for displaying the shooted alphabets on the screen---//
                       
                       {
                         
-                        for(int col = 0; col < 15; col ++)
+                        for(col = 0; col < 15; col ++)
                             
                             {
                               
@@ -876,7 +956,7 @@ void DisplayFunction() {
                                       int x = col * 60 + 10;
                                       int y = height - (row + 1)*60 - 30;
                                       DrawAlphabet((alphabets)(boardalpha[row][col]), x, y, awidth, aheight);
-                                  
+                                      horizontalpop(row, col);
                                   }
                             
                               }   
@@ -906,6 +986,8 @@ void DisplayFunction() {
 	glutSwapBuffers();
 	//DO NOT MODIFY THESE LINES..
 }
+
+
 
 /* Function sets canvas size (drawing area) in pixels...
 
@@ -1051,17 +1133,19 @@ void Timer(int m) {
           {
               gradient_x = -gradient_x; 
           }
-          
+         if(ball_x >=868)
+          ball_x = 868;
          
-         int col = round(ball_x/60) ; //---calculating the column where the ball is reached---//
+         int cols = round(ball_x/60) ; //---calculating the column where the ball is reached---//
          
         if (ball_y >= height - 140 - pile_height[(int)ball_x/60]*60 - 70)  //---Stopping the ball after reaching the first two rows and initially stored ball--//
           {
               
-              int row = pile_height[col] + 2;
+              int rows = pile_height[cols] + 2;
               
-              boardalpha[row][col] = shoot;
-              pile_height[col]++;
+              boardalpha[rows][cols] = shoot;
+              pile_height[cols]++;
+              
               
               
               ball_x = center_pos_x;       //---resetting the positions---//
@@ -1101,7 +1185,7 @@ int main(int argc, char*argv[]) {
 	//check(i);
 		cout<< " word "<< i << " =" << dictionary[i] <<endl;
         burstingRows();
-        
+        //horizontalpop(row, col);
 	//Write your code here for filling the canvas with different Alphabets. You can use the Getalphabet function for getting the random alphabets
 
 
