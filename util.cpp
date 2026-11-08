@@ -471,12 +471,11 @@ void ReadWords(string filename, string * dictionary) {
 	ifile.open("words_alpha.txt");
 
 	if (ifile.is_open()) {
-		while (!ifile.eof()) {
-
-			ifile >> word;
+		// Read until extraction fails; checking eof() first would read one
+		// word past the end of the file and overflow the dictionary array
+		while (ifile >> word) {
 			dictionary[i] = word;
 			i++;
-
 		}
 	}
 	ifile.close();

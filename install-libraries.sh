@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt-get install freeglut3-dev glew-utils libglew1.6-dev libfreeimage-dev	
+sudo apt-get install make g++ freeglut3-dev libglew-dev libfreeimage-dev
